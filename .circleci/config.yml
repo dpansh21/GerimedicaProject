@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11.0.3-jdk-stretch
+
+    working_directory: ~/GerimedicaProject/
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "pom.xml" }}
+            - v1-dependencies-      
+      - run: mvn dependency:go-offline
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: v1-dependencies-{{ checksum "pom.xml" }}
+
+      - run: mvn clean install -Dcucumber.options='--tags @SearchFullRegression'
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p /home/circleci/APITest/results/cucumber-reports/
+            find . -type f -regex ".*/results/cucumber-reports/.*html" -exec cp {} /home/circleci/SeleniumTest/results/cucumber-reports/MuseumTestCIReport.html \;
+          when: always
+      - store_test_results:
+          path: /home/circleci/APITest/results/cucumber-reports/
+      - store_artifacts:
+          path: /home/circleci/APITest/results/cucumber-reports/ 
