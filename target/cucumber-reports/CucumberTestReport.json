@@ -1,0 +1,157 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-21T00:40:21.090Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3002400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdef.ApiStepDef.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "03.Search for the posts written by the user",
+        "description": "",
+        "id": "test-the-published-api-on-jsonplaceholder-typecode;03.search-for-the-posts-written-by-the-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "output": [
+              "Base URL: https://jsonplaceholder.typicode.com/",
+              "Content Type: \"application/json\""
+            ],
+            "result": {
+              "duration": 5002100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Fetch the api details",
+            "match": {
+              "location": "stepdef.ApiStepDef.getBaseURL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "output": [
+              "API Response: [\n  {\n    \"id\": 9,\n    \"name\": \"Glenna Reichert\",\n    \"username\": \"Delphine\",\n    \"email\": \"Chaim_McDermott@dana.io\",\n    \"address\": {\n      \"street\": \"Dayna Park\",\n      \"suite\": \"Suite 449\",\n      \"city\": \"Bartholomebury\",\n      \"zipcode\": \"76495-3109\",\n      \"geo\": {\n        \"lat\": \"24.6463\",\n        \"lng\": \"-168.8889\"\n      }\n    },\n    \"phone\": \"(775)976-6794 x41206\",\n    \"website\": \"conrad.com\",\n    \"company\": {\n      \"name\": \"Yost and Sons\",\n      \"catchPhrase\": \"Switchable contextually-based project\",\n      \"bs\": \"aggregate real-time technologies\"\n    }\n  }\n]"
+            ],
+            "result": {
+              "duration": 3517360500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Fetch the specific user details",
+            "match": {
+              "location": "stepdef.ApiStepDef.fetchUserDetails(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "endpoint",
+                  "queryparam",
+                  "queryparamvalue"
+                ]
+              },
+              {
+                "cells": [
+                  "users",
+                  "username",
+                  "Delphine"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "API Response: [\n  {\n    \"userId\": 9,\n    \"id\": 81,\n    \"title\": \"tempora rem veritatis voluptas quo dolores vero\",\n    \"body\": \"facere qui nesciunt est voluptatum voluptatem nisi\\nsequi eligendi necessitatibus ea at rerum itaque\\nharum non ratione velit laboriosam quis consequuntur\\nex officiis minima doloremque voluptas ut aut\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 82,\n    \"title\": \"laudantium voluptate suscipit sunt enim enim\",\n    \"body\": \"ut libero sit aut totam inventore sunt\\nporro sint qui sunt molestiae\\nconsequatur cupiditate qui iste ducimus adipisci\\ndolor enim assumenda soluta laboriosam amet iste delectus hic\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 83,\n    \"title\": \"odit et voluptates doloribus alias odio et\",\n    \"body\": \"est molestiae facilis quis tempora numquam nihil qui\\nvoluptate sapiente consequatur est qui\\nnecessitatibus autem aut ipsa aperiam modi dolore numquam\\nreprehenderit eius rem quibusdam\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 84,\n    \"title\": \"optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut\",\n    \"body\": \"sint molestiae magni a et quos\\neaque et quasi\\nut rerum debitis similique veniam\\nrecusandae dignissimos dolor incidunt consequatur odio\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 85,\n    \"title\": \"dolore veritatis porro provident adipisci blanditiis et sunt\",\n    \"body\": \"similique sed nisi voluptas iusto omnis\\nmollitia et quo\\nassumenda suscipit officia magnam sint sed tempora\\nenim provident pariatur praesentium atque animi amet ratione\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 86,\n    \"title\": \"placeat quia et porro iste\",\n    \"body\": \"quasi excepturi consequatur iste autem temporibus sed molestiae beatae\\net quaerat et esse ut\\nvoluptatem occaecati et vel explicabo autem\\nasperiores pariatur deserunt optio\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 87,\n    \"title\": \"nostrum quis quasi placeat\",\n    \"body\": \"eos et molestiae\\nnesciunt ut a\\ndolores perspiciatis repellendus repellat aliquid\\nmagnam sint rem ipsum est\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 88,\n    \"title\": \"sapiente omnis fugit eos\",\n    \"body\": \"consequatur omnis est praesentium\\nducimus non iste\\nneque hic deserunt\\nvoluptatibus veniam cum et rerum sed\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 89,\n    \"title\": \"sint soluta et vel magnam aut ut sed qui\",\n    \"body\": \"repellat aut aperiam totam temporibus autem et\\narchitecto magnam ut\\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\\ntempore quas est\"\n  },\n  {\n    \"userId\": 9,\n    \"id\": 90,\n    \"title\": \"ad iusto omnis odit dolor voluptatibus\",\n    \"body\": \"minus omnis soluta quia\\nqui sed adipisci voluptates illum ipsam voluptatem\\neligendi officia ut in\\neos soluta similique molestias praesentium blanditiis\"\n  }\n]"
+            ],
+            "result": {
+              "duration": 1668126900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Fetch the posts by given user",
+            "match": {
+              "location": "stepdef.ApiStepDef.getPostOfGivenUser(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "endpoint",
+                  "queryparam"
+                ]
+              },
+              {
+                "cells": [
+                  "posts",
+                  "userId"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Successfully validated the posts of the user with userID: 9"
+            ],
+            "result": {
+              "duration": 415296400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Validate the Post of given user",
+            "match": {
+              "location": "stepdef.ApiStepDef.validatePosts()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@APITest"
+          },
+          {
+            "name": "@APIRegression"
+          },
+          {
+            "name": "@SearchPosts"
+          },
+          {
+            "name": "@Priority1"
+          }
+        ]
+      }
+    ],
+    "name": "Test the published API on jsonplaceholder,typecode",
+    "description": "",
+    "id": "test-the-published-api-on-jsonplaceholder-typecode",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TestAPI.feature",
+    "tags": [
+      {
+        "name": "@APITest",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@APIRegression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 10
+        }
+      }
+    ]
+  }
+]
